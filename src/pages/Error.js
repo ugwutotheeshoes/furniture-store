@@ -25,10 +25,12 @@ const Wrapper = styled.main`
   height: 100vh;
   h1 {
     font-size: 10rem;
+    line-height: 1;
   }
   h3 {
     text-transform: uppercase;
     margin-bottom: 2rem;
+    line-height: 1;
   }
   .btn{
     background-color: var(--clr-primary-6);
