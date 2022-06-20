@@ -34,6 +34,17 @@ const Wrapper = styled.main`
     background-color: var(--clr-primary-6);
     color: var(--clr-grey-1);
   }
+  @media (max-width: 830px) {
+    h1{
+      font-size: 7rem;
+      /* margin-bottom: 2rem; */
+      line-height: 1;
+    }
+    h3{
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
 `;
 
 export default Error;
