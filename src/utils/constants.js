@@ -1,6 +1,6 @@
 import React from "react";
 import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
-import { FaQuestionCircle, FaListUl, FaHome, FaTag, FaShoppingCart } from "react-icons/fa";
+import { FaListUl, FaHome, FaTag, FaShoppingCart } from "react-icons/fa";
 export const links = [
   {
     id: 1,

@@ -5,7 +5,7 @@ import { links } from "../utils/constants";
 import { useProductsContext } from "../context/ProductContext";
 
 const MiniNavbar = () => {
-  const { isMinibarOpen, openMinibar, closeMinibar } = useProductsContext();
+  const { isMinibarOpen} = useProductsContext();
   return (
     <MiniContainer>
       <ul className={`${isMinibarOpen ? "fixed-links" : "hide"}`}>

@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useReducer } from "react";
 import reducer from "../reducer/ProductReducer";
 import {
   MINIBAR_OPEN,
   MINIBAR_CLOSE,
-  GET_PRODUCTS_BEGIN,
-  GET_PRODUCTS_SUCCESS,
-  GET_PRODUCTS_ERROR,
-  GET_SINGLE_PRODUCT_BEGIN,
-  GET_SINGLE_PRODUCT_SUCCESS,
-  GET_SINGLE_PRODUCT_ERROR,
+  // GET_PRODUCTS_BEGIN,
+  // GET_PRODUCTS_SUCCESS,
+  // GET_PRODUCTS_ERROR,
+  // GET_SINGLE_PRODUCT_BEGIN,
+  // GET_SINGLE_PRODUCT_SUCCESS,
+  // GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
 
 const InitialState = {

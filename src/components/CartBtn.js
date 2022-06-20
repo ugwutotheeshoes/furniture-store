@@ -1,11 +1,11 @@
 import React from "react";
-import { FaShoppingBag, FaUserMinus, FaUserPlus } from "react-icons/fa";
+// import { FaShoppingBag, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/ProductContext";
-import { useCartContext } from "../context/CartContext";
-import { useUserContext } from "../context/UserContext";
+// import { useCartContext } from "../context/CartContext";
+// import { useUserContext } from "../context/UserContext";
 
 const CartBtn = () => {
   const { closeMiniBar } = useProductsContext();
