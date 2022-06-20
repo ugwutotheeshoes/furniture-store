@@ -1,11 +1,17 @@
 import React from 'react'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div>
+    <HomeContainer>
         <h1>Homepage</h1>
-    </div>
+    </HomeContainer>
   )
 }
+
+const HomeContainer = styled.div`
+margin-bottom: 50rem;
+`
 
 export default Homepage

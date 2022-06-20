@@ -1,22 +1,33 @@
 import React from "react";
 import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
+import { FaQuestionCircle, FaListUl, FaHome, FaTag, FaShoppingCart } from "react-icons/fa";
 export const links = [
   {
     id: 1,
     text: "home",
     url: "/",
+    icon: <FaHome />,
   },
   {
     id: 2,
-    text: "about",
-    url: "/about",
+    text: "categories",
+    url: "/categories",
+    icon: <FaListUl />
   },
   {
     id: 3,
-    text: "products",
-    url: "/products",
+    text: "deals",
+    url: "/deals",
+    icon: <FaTag />
+  },
+  {
+    id: 4,
+    text: "checkout",
+    url: "/checkout",
+    icon: <FaShoppingCart />
   },
 ];
+
 
 export const services = [
   {
@@ -39,6 +50,6 @@ export const services = [
   },
 ];
 
-export const ProductUrl = "https://course-api.com/react-store-products";
+export const CategoryUrl = "https://course-api.com/react-store-products";
 
 export const SingleProductUrl = `https://course-api.com/react-store-single-product?id=`;

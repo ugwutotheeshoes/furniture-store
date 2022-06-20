@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { GrSolaris } from "react-icons/gr";
-import { FaBars } from "react-icons/fa";
 import { links } from "../utils/constants";
 import CartBtn from "./CartBtn";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
@@ -12,14 +11,9 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <div className="title">
-              <h3>Sevanis</h3>
-              <GrSolaris className="title-icon" />
-            </div>
+            <Logo />
           </Link>
-          <button type="button" className="nav-toggle">
-            <FaBars />
-          </button>
+
           <ul className="nav-links">
             {links.map((link) => {
               const { id, text, url } = link;
@@ -31,6 +25,9 @@ const Navbar = () => {
             })}
           </ul>
           <CartBtn />
+          {/* <button type="button" className="nav-toggle">
+            <FaBars />
+          </button> */}
         </div>
       </div>
     </NavContainer>
@@ -42,6 +39,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--clr-white);
 
   .nav-center {
     width: 90vw;
@@ -55,33 +53,12 @@ const NavContainer = styled.nav`
     justify-content: space-between;
   }
 
-  .title {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-    color: var(--clr-primary-5);
-  }
-
-  .title h3 {
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-  }
-
-  .title-icon {
-    position: absolute;
-    top: -9%;
-    right: 38.7%;
-    font-size: 2.6rem;
-    color: var(--clr-primary-5);
-    border: none;
-  }
-
   .nav-toggle {
     background: transparent;
     border: transparent;
     color: var(--clr-primary-5);
+    margin-bottom: 0.36rem;
+
     cursor: pointer;
     svg {
       font-size: 1.4rem;
@@ -92,66 +69,31 @@ const NavContainer = styled.nav`
     display: none;
   }
 
-  @media (min-width: 800px) {
-    .title {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 0.5rem;
-      color: var(--clr-primary-5);
-    }
-
-    .title-icon {
-      position: absolute;
-      top: -15%;
-      right: 38%;
-      font-size: 3.2rem;
-      color: var(--clr-primary-5);
-      border: none;
-    }
-
-    .nav-toggle {
-      display: none;
-    }
+  @media (min-width: 830px) {
 
     .nav-links {
       display: flex;
       justify-content: center;
       li {
         margin: 0 0.5rem;
+        padding: 0 1rem;
       }
       a {
         color: var(--clr-primary-5);
         font-size: 1rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         padding: 0.5rem;
         letter-spacing: var(--spacing);
         &:hover {
+          transition: var(--transition);
           border-bottom: 2px solid var(--clr-primary-7);
         }
       }
     }
+    .cart-btn-wrapper {
+      display: grid;
+    }
   }
-
-  /* @media (min-width: 200px) {
-    .title {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 0.5rem;
-      color: var(--clr-primary-5);
-    }
-
-    .title h3 {
-      text-transform: uppercase;
-      letter-spacing: 0.5rem;
-      font-size: 2.5rem;
-    }
-
-    
-  } */
 `;
 
 export default Navbar;
