@@ -7,6 +7,7 @@ const Cart = () => {
   return (
     <CartContainer>
       <h1>Cart</h1>
+      <Link to="/" className="btn">go back to homepage</Link>
       <Link to="/checkout" className="toggle">
         <FaShoppingCart className="icon" />
         <span>checkout</span>
@@ -32,6 +33,11 @@ const CartContainer = styled.div`
     border-radius: 0.5rem 0.5rem 0 0;
     background: rgba(255, 255, 255, 0.6);
     z-index: 2;
+  }
+
+  .btn{
+    background-color: var(--clr-primary-6);
+    color: var(--clr-grey-1);
   }
 
   span {

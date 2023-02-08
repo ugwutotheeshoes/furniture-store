@@ -5,7 +5,7 @@ import { links } from "../utils/constants";
 import { useProductsContext } from "../context/ProductContext";
 
 const MiniNavbar = () => {
-  const { isMinibarOpen} = useProductsContext();
+  const { isMinibarOpen } = useProductsContext();
   return (
     <MiniContainer>
       <ul className={`${isMinibarOpen ? "fixed-links" : "hide"}`}>
@@ -13,8 +13,12 @@ const MiniNavbar = () => {
           const { id, text, url, icon } = link;
           return (
             <li key={id}>
-              <span className="icon">{icon}</span>
-              <Link to={url}>{text}</Link>
+              {/* <span className="icon"> */}
+              <Link to={url}>
+                {icon}
+                {/* </span> */}
+                {text}
+              </Link>
             </li>
           );
         })}
@@ -41,11 +45,11 @@ const MiniContainer = styled.div`
     justify-content: center;
     li {
       margin: 0 0.5rem;
-      display: flex;
-      align-items: center;
       padding: 0 1rem;
     }
     a {
+      display: flex;
+      align-items: center;
       color: var(--clr-primary-5);
       font-size: 1rem;
       text-transform: uppercase;
@@ -54,11 +58,11 @@ const MiniContainer = styled.div`
     }
   }
 
-  .icon {
+  svg {
     background: transparent;
     border: transparent;
     color: var(--clr-primary-5);
-    margin-top: 0.27rem;
+    margin-right: 0.27rem;
     font-size: 1.3rem;
   }
 
