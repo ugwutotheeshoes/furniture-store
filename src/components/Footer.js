@@ -26,12 +26,12 @@ const Wrapper = styled.div`
 
   h4 {
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 500;
     font-size: 0.6rem;
   }
 
   h5{
-    font-weight: 200;
+    font-weight: 500;
     font-size: 0.6rem;
     cursor: pointer;
   }

@@ -94,7 +94,7 @@ const MiniContainer = styled.div`
         display: flex;
         flex-direction: column;
         padding-top: 0.1rem;
-        font-size: 0.2rem;
+        font-size: 0.4rem;
         font-weight: 700;
       }
     }
@@ -105,7 +105,7 @@ const MiniContainer = styled.div`
       color: var(--clr-primary-5);
       /* margin-bottom: 0.27rem; */
       margin-bottom: 0.05rem;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
 
     .hide {
