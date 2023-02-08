@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <CartContainer>
       <h1>Cart</h1>
-      <Link to="/" className="btn">go back to homepage</Link>
+      {/* <Link to="/" className="btn">go back to homepage</Link> */}
       <Link to="/checkout" className="toggle">
         <FaShoppingCart className="icon" />
         <span>checkout</span>
