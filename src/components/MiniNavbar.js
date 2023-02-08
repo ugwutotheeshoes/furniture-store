@@ -78,7 +78,7 @@ const MiniContainer = styled.div`
   @media (max-width: 630px) {
     .fixed-links {
       font-size: 1rem;
-      margin: 0 1rem;
+      margin: 0 3rem;
 
       li {
         display: flex;
