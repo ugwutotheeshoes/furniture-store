@@ -89,17 +89,19 @@ const MiniContainer = styled.div`
 
       a {
         /* display: none; */
+        display: flex;
+        flex-direction: column;
         padding-top: 0.1rem;
         font-size: 0.4rem;
         font-weight: 700;
       }
     }
 
-    .icon {
+    svg {
       background: transparent;
       border: transparent;
       color: var(--clr-primary-5);
-      margin-top: 0.27rem;
+      /* margin-bottom: 0.27rem; */
       font-size: 0.9rem;
     }
 
