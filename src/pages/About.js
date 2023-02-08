@@ -56,7 +56,7 @@ const Wrapper = styled.section`
       line-height: 0.25;
     }
     .underline {
-      width: 8.8rem;
+      width: 10rem;
     }
     p {
       font-size: 0.875rem;
