@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const About = () => {
   return (
     <main>
-      <Wrapper className="">
+      <Wrapper>
         <PageHero title="about" />
         <img
           src="https://res.cloudinary.com/ugwutotheeshoes/image/upload/v1655729137/sevanis/workspace.jpg"
@@ -31,6 +31,7 @@ const About = () => {
 const Wrapper = styled.section`
   display: grid;
   gap: 4rem;
+  margin-bottom: 5rem;
   /* margin: 0 2rem; */
 
   img {

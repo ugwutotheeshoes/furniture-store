@@ -63,8 +63,8 @@ const MiniContainer = styled.div`
     background: transparent;
     border: transparent;
     color: var(--clr-primary-5);
-    margin-right: 0.27rem;
-    font-size: 1.3rem;
+    margin-right: 0.3rem;
+    font-size: 1.1rem;
   }
 
   .hide {

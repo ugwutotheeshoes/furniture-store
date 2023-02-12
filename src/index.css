@@ -204,7 +204,12 @@ p {
 }
 
 .page {
+  min-height: calc(100vh  - (40vh));
+}
+
+.page-50 {
   min-height: calc(100vh - (20vh + 20rem));
+  margin-bottom: 5rem
 }
 
 .title {
