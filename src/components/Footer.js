@@ -6,7 +6,7 @@ const Footer = () => {
     <Wrapper>
       {/* <span className="footer-container"> */}
         <h4>&copy;{new Date().getFullYear()} sevanis</h4>
-        <h5>Privacy & Cookies | Ts&Cs | Accessibility</h5>
+        <h5>Privacy & Cookies | Terms | Accessibility</h5>
       {/* </span> */}
     </Wrapper>
   );
