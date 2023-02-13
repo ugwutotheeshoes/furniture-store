@@ -31,6 +31,7 @@ const Wrapper = styled.section`
   padding: 5rem 0;
   h3 {
     text-transform: none;
+    line-height: 0.9;
   }
   p {
     line-height: 2;
