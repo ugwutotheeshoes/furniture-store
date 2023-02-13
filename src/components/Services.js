@@ -39,7 +39,6 @@ const Wrapper = styled.div`
   h3,
   h4 {
     color: var(--clr-primary-1);
-    line-height: 0.9;
   }
   padding: 5rem 0;
   background: var(--clr-primary-10);
