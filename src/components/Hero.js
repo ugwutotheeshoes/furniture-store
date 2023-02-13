@@ -54,8 +54,8 @@ const Wrapper = styled.section`
     .hero-btn {
       font-size: 0.7rem;
     }
-    h1{
-        font-size: 2rem; 
+    h1 {
+      font-size: 2rem;
     }
     p {
       font-size: 0.7rem;
@@ -63,7 +63,6 @@ const Wrapper = styled.section`
   }
   @media (max-width: 750px) {
     margin: 0 2rem;
-    
   }
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
@@ -91,18 +90,23 @@ const Wrapper = styled.section`
       object-fit: cover;
       border-radius: var(--radius);
     }
-    .accent-img {
+    /* .accent-img {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 250px;
       transform: translateX(-50%);
       border-radius: var(--radius);
-    }
+    } */
     .img-container::before {
       content: "";
       position: absolute;
       width: 10%;
+      height: 80%;
+      background: var(--clr-primary-9);
+      bottom: 0%;
+      left: -8%;
+      border-radius: var(--radius);
     }
   }
 `;
