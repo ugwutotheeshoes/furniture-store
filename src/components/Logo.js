@@ -46,6 +46,10 @@ const Wrapper = styled.div`
       color: var(--clr-primary-5);
       border: none;
     }
+
+    .logo h3{
+      line-height: 1.6;
+    }
   }
 
   @media (min-width: 830px) {
