@@ -58,6 +58,10 @@ const Wrapper = styled.div`
       color: var(--clr-primary-5);
     }
 
+    .logo h3{
+      line-height: 0.5;
+    }
+
     .logo-icon {
       position: absolute;
       top: -55%;

@@ -50,6 +50,6 @@ export const services = [
   },
 ];
 
-export const CategoryUrl = "https://course-api.com/react-store-products";
+export const ProductsUrl = "https://course-api.com/react-store-products";
 
 export const SingleProductUrl = `https://course-api.com/react-store-single-product?id=`;
