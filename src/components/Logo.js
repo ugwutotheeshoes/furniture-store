@@ -48,7 +48,7 @@ const Wrapper = styled.div`
     }
 
     .logo h3{
-      line-height: 1.6;
+      line-height: 0.5;
     }
   }
 
