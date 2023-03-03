@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useProductsContext } from "../context/ProductContext.js";
 // import { Link } from "react-router-dom";
-import Error from "./Error";
+import ProductError from "./ProductError";
 import Loading from "./Loading";
 import Product from "./Product";
 
@@ -16,13 +16,13 @@ const FeaturedProducts = () => {
     return <Loading />;
   }
   if (error) {
-    return <Error />;
+    return <ProductError />;
   }
   return (
     <Wrapper className="section">
       <div className="title">
         <h2>featured products</h2>
-        <div className="underline"></div>
+        <div className="underline"></div> 
         <div className="section-center featured">
           {featured.slice(0, 3).map((product) => {
             return <Product key={product.id} {...product} />;

@@ -12,22 +12,21 @@ export const links = [
     id: 2,
     text: "categories",
     url: "/categories",
-    icon: <FaListUl />
+    icon: <FaListUl />,
   },
   {
     id: 3,
     text: "deals",
     url: "/deals",
-    icon: <FaTag />
+    icon: <FaTag />,
   },
   {
     id: 4,
     text: "checkout",
     url: "/checkout",
-    icon: <FaShoppingCart />
+    icon: <FaShoppingCart />,
   },
 ];
-
 
 export const services = [
   {
@@ -50,6 +49,6 @@ export const services = [
   },
 ];
 
-export const ProductsUrl = "https://course-api.com/react-store-products";
+export const products_url = "https://course-api.com/react-store-products";
 
-export const SingleProductUrl = `https://course-api.com/react-store-single-product?id=`;
+export const single_product_url = `https://course-api.com/react-store-single-product?id=`;

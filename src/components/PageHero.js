@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const PageHero = ({ title }) => {
+const PageHero = ({ title, product }) => {
   return (
     <Wrapper>
       <div>
         <h3>
-          <Link to="/">Home</Link>/ {title}
+          <Link to="/">Home</Link>/
+          {product && <Link to="/products">Products</Link>}
+          / {title}
         </h3>
       </div>
     </Wrapper>
@@ -31,8 +33,9 @@ const Wrapper = styled.section`
     color: var(--clr-primary-1);
   }
 
-  h3{
+  h3 {
     text-transform: uppercase;
+    font-size: 1.1rem;
   }
 
   @media (max-width: 830px) {
