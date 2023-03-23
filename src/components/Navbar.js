@@ -147,7 +147,7 @@ const NavContainer = styled.nav`
 
   @media (max-width: 800px) {
     .auth-btn {
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       svg {
         font-size: 1.8rem;
       }
