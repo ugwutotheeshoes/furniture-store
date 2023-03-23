@@ -11,8 +11,12 @@ import ProductImages from "./ProductImages";
 import Loading from "./Loading";
 import ListView from "./ListView";
 import ProductError from "./ProductError";
+import ProductList from "./ProductList";
 import Stars from "./Stars";
+import Sort from "./Sort";
+import Filters from "./Filters";
 import AddToCart from "./AddToCart";
+import CartContent from "./CartContent";
 
 export {
   Footer,
@@ -25,9 +29,13 @@ export {
   FeaturedProducts,
   Loading,
   ProductError,
+  ProductList,
   Product,
+  Filters,
   ProductImages,
   ListView,
   Stars,
+  Sort,
   AddToCart,
+  CartContent,
 };

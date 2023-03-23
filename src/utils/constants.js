@@ -1,6 +1,6 @@
 import React from "react";
 import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
-import { FaListUl, FaHome, FaTag, FaShoppingCart } from "react-icons/fa";
+import { FaListUl, FaHome, FaTag } from "react-icons/fa";
 export const links = [
   {
     id: 1,
@@ -10,8 +10,8 @@ export const links = [
   },
   {
     id: 2,
-    text: "categories",
-    url: "/categories",
+    text: "products",
+    url: "/products",
     icon: <FaListUl />,
   },
   {
@@ -19,12 +19,6 @@ export const links = [
     text: "deals",
     url: "/deals",
     icon: <FaTag />,
-  },
-  {
-    id: 4,
-    text: "checkout",
-    url: "/checkout",
-    icon: <FaShoppingCart />,
   },
 ];
 

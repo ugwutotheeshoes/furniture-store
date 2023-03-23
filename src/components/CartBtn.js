@@ -4,30 +4,33 @@ import { AiOutlineShopping } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/ProductContext";
-// import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../context/CartContext";
 // import { useUserContext } from "../context/UserContext";
 
 const CartBtn = () => {
   const { closeMiniBar } = useProductsContext();
+  const { total_items } = useCartContext();
   return (
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn" onClick={closeMiniBar}>
         <span className="cart-container">
           <AiOutlineShopping />
-          <span className="cart-value">60</span>
+          <span className="cart-value">{total_items}</span>
         </span>
       </Link>
+      {/* do an if or else for styling the cart button so when its a single digit value shift the postion and change the 
+      styling classname and vice versa */}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* display: grid; */
+  /* display: grid;
   display: flex;
   justify-content: flex-end;
-  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 125px;
+  width: 125px; */
 
   .cart-btn {
     letter-spacing: var(--spacing);

@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
 import CartBtn from "./CartBtn";
 import Logo from "./Logo";
+import { AiOutlineUserAdd } from "react-icons/ai";
+import { AiOutlineUserDelete } from "react-icons/ai";
+import { useUserContext } from "../context/UserContext";
+import { useCartContext } from "../context/CartContext";
 
 const Navbar = () => {
+  const { loginWithRedirect, myUser, logout } = useUserContext();
+  const { clearCart } = useCartContext();
   return (
     <NavContainer>
       <div className="nav-center">
@@ -23,11 +29,38 @@ const Navbar = () => {
                 </li>
               );
             })}
+            {myUser && (
+              <li>
+                <Link to="/checkout">checkout</Link>
+              </li>
+            )}
           </ul>
-          <CartBtn />
-          {/* <button type="button" className="nav-toggle">
-            <FaBars />
-          </button> */}
+          <div className="foo">
+            <CartBtn />
+            {myUser ? (
+              <button
+                type="button"
+                className="auth-btn out"
+                onClick={() => {
+                  clearCart();
+                  localStorage.removeItem("user");
+                  logout({
+                    returnTo: window.location.origin,
+                  });
+                }}
+              >
+                <AiOutlineUserDelete />
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="auth-btn"
+                onClick={loginWithRedirect}
+              >
+                <AiOutlineUserAdd />
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </NavContainer>
@@ -53,24 +86,39 @@ const NavContainer = styled.nav`
     justify-content: space-between;
   }
 
-  .nav-toggle {
+  .auth-btn {
     background: transparent;
     border: transparent;
     color: var(--clr-primary-5);
-    margin-bottom: 0.36rem;
-
+    margin-left: 1.1rem;
+    display: grid;
+    /* margin-bottom: 0.36rem; */
     cursor: pointer;
     svg {
-      font-size: 1.4rem;
+      border: 2px solid red;
+      font-size: 1.9rem;
+      /* font-size: 1.4rem; */
+      border-radius: 50%;
     }
+  }
+
+  .foo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .nav-links {
     display: none;
   }
 
-  @media (min-width: 830px) {
+  .out {
+    svg {
+      border: 2px solid lightseagreen;
+    }
+  }
 
+  @media (min-width: 830px) {
     .nav-links {
       display: flex;
       justify-content: center;
@@ -90,8 +138,18 @@ const NavContainer = styled.nav`
         }
       }
     }
+
     .cart-btn-wrapper {
       display: grid;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .auth-btn {
+      margin-bottom: 2px;
+      svg {
+        font-size: 1.4rem;
+      }
     }
   }
 `;

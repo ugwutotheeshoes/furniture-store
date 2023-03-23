@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
 import { useProductsContext } from "../context/ProductContext";
+import { useUserContext } from "../context/UserContext";
+import { FaShoppingCart } from "react-icons/fa";
 
 const MiniNavbar = () => {
+  const { myUser } = useUserContext();
   const { isMinibarOpen } = useProductsContext();
   return (
     <MiniContainer>
@@ -13,15 +16,21 @@ const MiniNavbar = () => {
           const { id, text, url, icon } = link;
           return (
             <li key={id}>
-              {/* <span className="icon"> */}
               <Link to={url}>
                 {icon}
-                {/* </span> */}
                 {text}
               </Link>
             </li>
           );
         })}
+        {myUser && (
+          <li>
+            <Link to="/checkout">
+              <FaShoppingCart />
+              checkout
+            </Link>
+          </li>
+        )}
       </ul>
     </MiniContainer>
   );
@@ -42,7 +51,7 @@ const MiniContainer = styled.div`
 
   .fixed-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 2rem;
     li {
       margin: 0 0.5rem;
@@ -78,7 +87,8 @@ const MiniContainer = styled.div`
   @media (max-width: 630px) {
     .fixed-links {
       font-size: 1rem;
-      padding: 0 3rem;
+      /* padding: 0 3rem; */
+      width: 100%;
 
       li {
         display: flex;
@@ -94,7 +104,7 @@ const MiniContainer = styled.div`
         display: flex;
         flex-direction: column;
         padding-top: 0.1rem;
-        font-size: 0.4rem;
+        font-size: 0.6rem;
         font-weight: 700;
       }
     }

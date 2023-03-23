@@ -5,11 +5,12 @@ import { Footer, Navbar, MiniNavbar } from "./components";
 import {
   About,
   Cart,
-  Checkout,
+  // Checkout,
   Error,
   Homepage,
-  Products,
+  ProductsPage,
   SingleProduct,
+  // AuthWrapper,
 } from "./pages";
 
 function App() {
@@ -17,20 +18,21 @@ function App() {
     // <Router>
     <div className="App">
       {/* <Router> */}
+      {/* <AuthWrapper> */}
       <Navbar />
       {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="about" element={<About />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="checkout" element={<Checkout />} />
         <Route path="error" element={<Error />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<ProductsPage />} />
         <Route path="products/:id" element={<SingleProduct />} />
       </Routes>
       <Footer />
       <MiniNavbar />
       {/* </Router> */}
+      {/* </AuthWrapper> */}
     </div>
   );
 }
