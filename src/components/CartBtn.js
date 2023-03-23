@@ -35,8 +35,8 @@ const Wrapper = styled.div`
   .cart-btn {
     letter-spacing: var(--spacing);
     color: var(--clr-primary-5);
-    font-size: 1.9rem;
-    margin-bottom: 0.45rem;
+    font-size: 2.4rem;
+    /* margin-bottom: 0.45rem; */
   }
 
   .cart-container {
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: 34%;
     right: 25%;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--clr-primary-5);
     border: none;

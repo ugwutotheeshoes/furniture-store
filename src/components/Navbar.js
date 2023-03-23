@@ -35,6 +35,7 @@ const Navbar = () => {
               </li>
             )}
           </ul>
+          {/* make navbar buttons bigger on phone screen  */}
           <div className="foo">
             <CartBtn />
             {myUser ? (
@@ -148,7 +149,7 @@ const NavContainer = styled.nav`
     .auth-btn {
       margin-bottom: 2px;
       svg {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
     }
   }
