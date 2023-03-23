@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   .cart-value {
     position: absolute;
     top: 31%;
-    right: 25%;
+    right: 23.5%;
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--clr-primary-5);
