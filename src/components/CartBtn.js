@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 // import { FaShoppingBag, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
 import styled from "styled-components";
@@ -26,12 +26,6 @@ const CartBtn = () => {
 };
 
 const Wrapper = styled.div`
-  /* display: grid;
-  display: flex;
-  justify-content: flex-end;
-  /* grid-template-columns: 1fr 1fr;
-  align-items: center;
-  width: 125px; */
 
   .cart-btn {
     letter-spacing: var(--spacing);
