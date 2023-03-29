@@ -43,8 +43,8 @@ const Navbar = () => {
                 type="button"
                 className="auth-btn out"
                 onClick={() => {
-                  clearCart();
-                  localStorage.removeItem("user");
+                  // clearCart();
+                  // localStorage.removeItem("user");
                   logout({
                     returnTo: window.location.origin,
                   });

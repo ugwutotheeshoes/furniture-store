@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // import { FaShoppingBag, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
 import styled from "styled-components";
@@ -10,12 +10,13 @@ import { useCartContext } from "../context/CartContext";
 const CartBtn = () => {
   const { closeMiniBar } = useProductsContext();
   const { total_items } = useCartContext();
+  // const [number, setNumber] = useState(total_items)
   return (
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn" onClick={closeMiniBar}>
         <span className="cart-container">
           <AiOutlineShopping />
-          <span className="cart-value">{total_items}</span>
+          <span className={total_items < 10 ? "digit" :"cart-value"}>{total_items}</span>
         </span>
       </Link>
       {/* do an if or else for styling the cart button so when its a single digit value shift the postion and change the 
@@ -36,7 +37,7 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     color: var(--clr-primary-5);
     font-size: 2.4rem;
-    /* margin-bottom: 0.45rem; */
+    margin-bottom: 0.45rem;
   }
 
   .cart-container {
@@ -47,6 +48,15 @@ const Wrapper = styled.div`
     position: absolute;
     top: 31%;
     right: 23.5%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--clr-primary-5);
+    border: none;
+  }
+  .digit {
+    position: absolute;
+    top: 31%;
+    right: 34.5%;
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--clr-primary-5);

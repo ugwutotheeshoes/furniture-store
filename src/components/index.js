@@ -14,9 +14,14 @@ import ProductError from "./ProductError";
 import ProductList from "./ProductList";
 import Stars from "./Stars";
 import Sort from "./Sort";
+import SortDeals from "./SortDeals";
 import Filters from "./Filters";
 import AddToCart from "./AddToCart";
 import CartContent from "./CartContent";
+import StripeCheckout from "./StripeCheckout";
+import ShippingGrid from "./ShippingGrid";
+import ShippingList from "./ShippingList";
+import DealsList from "./DealsList";
 
 export {
   Footer,
@@ -36,6 +41,11 @@ export {
   ListView,
   Stars,
   Sort,
+  SortDeals,
   AddToCart,
   CartContent,
+  StripeCheckout,
+  ShippingList,
+  ShippingGrid,
+  DealsList,
 };

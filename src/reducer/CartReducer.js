@@ -45,7 +45,6 @@ const CartReducer = (state, action) => {
   }
   if (action.type === TOGGLE_CART_ITEM_AMOUNT) {
     const { id, value } = action.payload;
-    // eslint-disable-next-line array-callback-return
     const tempCart = state.cart.map((item) => {
       if (item.id === id) {
         if (value === "inc") {
@@ -62,9 +61,8 @@ const CartReducer = (state, action) => {
           }
           return { ...item, amount: newAmount };
         }
-      } else {
+      } 
         return item;
-      }
     });
     return { ...state, cart: tempCart };
   }
