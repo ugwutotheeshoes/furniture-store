@@ -7,11 +7,9 @@ import Logo from "./Logo";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { AiOutlineUserDelete } from "react-icons/ai";
 import { useUserContext } from "../context/UserContext";
-import { useCartContext } from "../context/CartContext";
 
 const Navbar = () => {
   const { loginWithRedirect, myUser, logout } = useUserContext();
-  const { clearCart } = useCartContext();
   return (
     <NavContainer>
       <div className="nav-center">
