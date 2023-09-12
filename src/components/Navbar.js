@@ -95,6 +95,7 @@ const NavContainer = styled.nav`
     cursor: pointer;
     svg {
       border: 2px solid red;
+      color: red;
       font-size: 1.9rem;
       /* font-size: 1.4rem; */
       border-radius: 50%;
@@ -113,6 +114,7 @@ const NavContainer = styled.nav`
 
   .out {
     svg {
+      color: lightseagreen;
       border: 2px solid lightseagreen;
     }
   }
